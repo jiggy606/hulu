@@ -3,11 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: [
-      'links.papareact',
-      'image.tmbd.org',
+      'tmdb.org',
+      'themoviedb.org',
+      'image.tmdb.org'
     ],
   },
 }
 
 module.exports = nextConfig
-
+ 
