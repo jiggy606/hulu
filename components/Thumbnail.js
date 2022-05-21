@@ -1,15 +1,17 @@
 import React from 'react'
 import Image from 'next/image'
 import { ThumbDownIcon, ThumbUpIcon } from '@heroicons/react/outline'
+import { forwardRef } from 'react'
 
-const Thumbnail = ({ result }) => {
+// eslint-disable-next-line react/display-name
+const Thumbnail = forwardRef(({ result }, ref) => {
 
     const poster_path = '/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg' 
 
     const baseUrl = 'https://image.tmdb.org/t/p/original/';
 
     return (
-        <div className='group cursor-pointer p-2 transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50'>
+        <div ref={ref} className='group cursor-pointer p-2 transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50'>
             <Image
                 alt='image'
                 layout='responsive'
@@ -31,6 +33,6 @@ const Thumbnail = ({ result }) => {
             </div>
         </div>
     );
-}
+})
 
 export default Thumbnail

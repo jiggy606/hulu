@@ -5,7 +5,6 @@ import Header from '../components/Header';
 import Navbar from '../components/Navbar';
 
 import requests from '../utils/requests';
-// import styles from '../styles/Home.module.css'
 
 export default function Home({ results }) {
   return (
